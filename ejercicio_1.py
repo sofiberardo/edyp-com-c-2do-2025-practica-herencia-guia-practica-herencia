@@ -13,15 +13,20 @@
 
 # ```python
 
-from Camiones import Camion
+from biblioteca.camiones import Camion
 
 class Auto(Camion):
-     def __init__(self, patente:str, marca:str, anio:int, modelo:str)  # Completa con los atributos necesarios
-         pass
+    posicion_inicial = 0
+    
+    def __init__(self, patente:str, marca:str, anio:int, modelo:str, desplazamiento: int, ruedas=4): 
+        super().__init__(patente,marca,anio,modelo)
+        self.desplazamiento = self.validar_entero(desplazamiento)
+        self.ruedas = ruedas
 
-#     def trasladarse(self, desplazamiento):
-#         # Actualiza posición y retorna mensaje
-#         pass
+    def trasladarse(self, desplazamiento):
+        
+
+#         
 # ```
 
 # #### Clase Lancha
